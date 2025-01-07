@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mv door_management_fi door_management_files
 count=0
 
 echo 'Здравствуйте! Вы запустили модуль ИИ, контролирующий все двери комплекса.'
@@ -127,7 +128,6 @@ fi
 echo
 if [ $count -eq 34 ]; then
   ./ai_door_control.sh &
-  kill 6010 ttys005
 else
   echo "Ошибка загрузки данных... Протокол ИИ прерван."
 fi
