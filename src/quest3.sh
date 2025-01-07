@@ -126,7 +126,7 @@ else
 fi
 
 echo
-sudo chmod 755 ai_door_control.sh
+chmod 755 ai_door_control.sh
 if [ $count -eq 34 ]; then
   ./ai_door_control.sh &
 else
