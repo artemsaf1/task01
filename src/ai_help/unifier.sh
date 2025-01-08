@@ -10,7 +10,7 @@ do
         tmp=$(< $file)
         KEY=$(($KEY + $tmp))
     else
-        KEY=1
+        KEY=0
         break
     fi
 done
