@@ -1,5 +1,16 @@
 #!/bin/bash
 
+mkdir key
+
+touch key/file{1..300}
+
+for i in {1..60}
+do
+    echo $((RANDOM%10 + 1)) > key/part${i}.key
+done
+
+echo "Generation completed"
+
 FILES=key/*
 KEY=0
 
@@ -22,4 +33,8 @@ else
     echo "Ok."
     echo $(($KEY*2)) > main.key
 fi
+
+sleep 1
+mv key ai_help
+mv main.key ai_help
 
